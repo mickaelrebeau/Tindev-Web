@@ -18,18 +18,9 @@ export function Kit() {
             <SecondaryTitle
                 title="Titre 2"
             />
-            <PrimaryButton
-                text="Button 1"
-                type_button="button"
-            />
-            <SecondaryButton
-                text="Button 2"
-                type_button="button"
-            />
-            <TertiaryButton
-                text="Button 3"
-                type_button="button"
-            />
+            <PrimaryButton type="button">Button 1</PrimaryButton>
+            <SecondaryButton type="button">Button 2</SecondaryButton>
+            <TertiaryButton type="button">Button 3</TertiaryButton>
             <Paragraph
                 content="Nostrud ea eu elit sint pariatur culpa proident consequat consectetur. Cupidatat ea deserunt ut ut esse consectetur minim sit consequat nisi. Incididunt cupidatat Lorem sunt esse aliqua qui exercitation esse ex veniam non. Excepteur eu sit reprehenderit commodo consectetur voluptate duis nulla exercitation esse."
             />
