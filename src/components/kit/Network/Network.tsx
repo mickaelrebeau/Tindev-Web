@@ -1,11 +1,9 @@
 import { dict_network } from '@/lib/data/network'
+import { assertsNotNull } from '@/lib/utils'
 
 export function Network({ name, link }: Network) {
   const net = dict_network.find((dict) => dict.name === name)
-
-  if (!net) {
-    return <>Network {name} not found</>
-  }
+  assertsNotNull(net)
 
   return (
     <a href={link} rel="noopener" className="">
