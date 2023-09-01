@@ -13,25 +13,30 @@ interface Props {
 
 export function Card({ pseudo, description, avatar, tags, reseaux }: Props) {
   return (
-    <section className="p-5 my-4 mx-auto w-[400px] h-auto rounded-md border-lg border shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset]">
-      <article className="flex flex-row-reverse justify-between items-center gap-5 w-content mb-2">
+    <article className="p-5 my-4 mx-auto w-[400px] h-auto rounded-md border-lg border shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset]">
+      <header className="flex flex-row-reverse justify-between items-center gap-5 w-content mb-2">
         <img
           src={avatar}
           className="rounded-full object-cover w-20 h-20 border"
         />
         <SecondaryTitle title={pseudo} />
-      </article>
-      <Paragraph content={description} />
-      <aside className="grid grid-cols-3 mb-4 gap-2">
-        {tags.map((tag) => (
-          <Tag key={tag} content={tag} />
-        ))}
-      </aside>
-      <div className="grid grid-cols-8 w-full h-fit gap-2">
+      </header>
+
+      <main>
+        <Paragraph content={description} />
+
+        <ul className="grid grid-cols-3 mb-4 gap-2">
+          {tags.map((tag) => (
+            <Tag key={tag} content={tag} />
+          ))}
+        </ul>
+      </main>
+
+      <footer className="grid grid-cols-8 w-full h-fit gap-2">
         {reseaux.map((reseau) => (
           <Network key={reseau.name} name={reseau.name} link={reseau.link} />
         ))}
-      </div>
-    </section>
+      </footer>
+    </article>
   )
 }
