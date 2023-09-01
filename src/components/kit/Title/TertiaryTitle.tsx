@@ -3,11 +3,11 @@ import { PropsWithChildren } from 'react'
 
 type Props = PropsWithChildren<{ className?: string }>
 
-export function SecondaryTitle({ children, className }: Props) {
+export function TertiaryTitle({ children, className }: Props) {
   return (
     <h2
       className={cn(
-        'text-2xl md:text-3xl lg:text-4xl text-zinc-950 dark:text-zinc-50',
+        'text-xl md:text-2xl lg:text-3xl text-zinc-950 dark:text-zinc-50 inline-block',
         className
       )}>
       {children}

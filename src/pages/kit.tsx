@@ -36,7 +36,7 @@ export function Kit() {
 
       {/* Stacked avatars */}
       <StackedAvatars
-        avatars={Array.from({ length: 10 }, () => faker.image.avatar())}
+        avatars={Array.from({ length: 10 }, () => faker.image.avatarGitHub())}
         countDisplayed={5}
         link={'/'}
         size={24}
@@ -44,7 +44,7 @@ export function Kit() {
         textSize="4xl"
       />
       <StackedAvatars
-        avatars={Array.from({ length: 3 }, () => faker.image.avatar())}
+        avatars={Array.from({ length: 3 }, () => faker.image.avatarGitHub())}
         countDisplayed={4}
         link={'/'}
         size={10}
