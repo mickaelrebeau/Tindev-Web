@@ -1,12 +1,11 @@
-import { Network } from '../kit/Network/Network'
 import { SecondaryTitle } from '../kit/Title/SecondarytTitle'
 import { Paragraph } from '../kit/Utilitaries/Paragraph'
 import { Tag } from '../kit/Utilitaries/Tag'
 
 interface Props {
-  pseudo: string
-  about: string
-  avatar: string
+  pseudo?: string
+  about?: string
+  avatar?: string
   tags: string[]
   reseaux: Network[]
 }
@@ -24,7 +23,6 @@ export function Card({
   about = 'lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci alias aliquid amet aperiam  ',
   avatar = 'https://via.placeholder.com/150',
   tags,
-  reseaux,
 }: Props) {
   return (
     <article className="p-5 my-4 mx-auto  h-full text-black rounded-lg border-lg border dark:border-black dark:bg-slate-800 bg-slate-300 min-w-[50%]  ">
@@ -62,12 +60,12 @@ export function Card({
                 return (
                   <Tag
                     key={tag}
-                    content={tag}
                     style={{
                       borderColor: randomColor,
                       color: randomColor,
-                    }}
-                  />
+                    }}>
+                    {tag}
+                  </Tag>
                 )
               })}
             </div>
@@ -76,52 +74,24 @@ export function Card({
             <Paragraph className={'md:text-3xl font-bold'}>Relations</Paragraph>
 
             <div className={'flex justify-start items-center pl-6 '}>
-              <div>
-                <div
-                  className={'h-18 w-18 rounded-full bg-red-300 -mx-6'}></div>
-              </div>
-              <div>
-                <div
-                  className={'h-18 w-18 rounded-full bg-blue-300 -mx-6'}></div>
-              </div>
-              <div>
-                <div
-                  className={
-                    'h-18 w-18 rounded-full bg-yellow-300 -mx-6'
-                  }></div>
-              </div>
-              <div>
-                <div
-                  className={'h-18 w-18 rounded-full bg-green-300 -mx-6'}></div>
-              </div>
-              <div>
-                <div
-                  className={'h-18 w-18 rounded-full bg-red-300 -mx-6'}></div>
-              </div>
-              <div>
-                <div
-                  className={'h-18 w-18 rounded-full bg-blue-300 -mx-6'}></div>
-              </div>
-              <div>
-                <div
-                  className={
-                    'h-18 w-18 rounded-full bg-yellow-300 -mx-6'
-                  }></div>
-              </div>
-              <div>
-                <div
-                  className={
-                    'h-18 w-18 rounded-full bg-purple-300 -mx-6'
-                  }></div>
-              </div>
-              <div>
-                <div
-                  className={
-                    'h-18 w-18 rounded-full bg-blue-300 -mx-6 flex justify-center items-center text-3xl font-bold'
-                  }>
-                  {' '}
-                  +8
-                </div>
+              <div className={'h-18 w-18 rounded-full bg-red-300 -mx-6'}></div>
+              <div className={'h-18 w-18 rounded-full bg-blue-300 -mx-6'}></div>
+              <div
+                className={'h-18 w-18 rounded-full bg-yellow-300 -mx-6'}></div>
+              <div
+                className={'h-18 w-18 rounded-full bg-green-300 -mx-6'}></div>
+              <div className={'h-18 w-18 rounded-full bg-red-300 -mx-6'}></div>
+              <div className={'h-18 w-18 rounded-full bg-blue-300 -mx-6'}></div>
+              <div
+                className={'h-18 w-18 rounded-full bg-yellow-300 -mx-6'}></div>
+              <div
+                className={'h-18 w-18 rounded-full bg-purple-300 -mx-6'}></div>
+              <div
+                className={
+                  'h-18 w-18 rounded-full bg-blue-300 -mx-6 flex justify-center items-center text-3xl font-bold'
+                }>
+                {' '}
+                +8
               </div>
             </div>
           </div>
