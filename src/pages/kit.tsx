@@ -7,24 +7,56 @@ import { SecondaryTitle } from '@/components/kit/Title/SecondarytTitle'
 import { Tag } from '@/components/kit/Utilitaries/Tag'
 import { Card } from '@/components/card/Card'
 import image from '@/assets/moi.jpg'
+import { StackedAvatars } from '@/components/ui/StackedAvatars'
 
 export function Kit() {
   return (
     <div className="">
+      {/* Titles */}
       <FirstTitle title="Titre 1" />
       <SecondaryTitle title="Titre 2" />
+
+      {/* Buttons */}
       <PrimaryButton>Button 1</PrimaryButton>
       <SecondaryButton>Button 2</SecondaryButton>
       <TertiaryButton>Button 3</TertiaryButton>
-      <Paragraph content="Nostrud ea eu elit sint pariatur culpa proident consequat consectetur. Cupidatat ea deserunt ut ut esse consectetur minim sit consequat nisi. Incididunt cupidatat Lorem sunt esse aliqua qui exercitation esse ex veniam non. Excepteur eu sit reprehenderit commodo consectetur voluptate duis nulla exercitation esse." />
-      <div className="">
-        <Tag content="Python" />
-      </div>
+
+      {/* Paragraphs */}
+      <Paragraph className={'dark:text-red-700'}>
+        Nostrud ea eu elit sint pariatur culpa proident consequat consectetur.
+        Cupidatat ea deserunt ut ut esse consectetur minim sit consequat nisi.
+        Incididunt cupidatat Lorem sunt esse aliqua qui exercitation esse ex
+        veniam non. Excepteur eu sit reprehenderit commodo consectetur voluptate
+        duis nulla exercitation esse.
+      </Paragraph>
+
+      {/* Tags */}
+      <Tag>Python</Tag>
+
+      {/* Stacked avatars */}
+      <StackedAvatars
+        avatars={new Array(10).fill('')}
+        countDisplayed={5}
+        link={'/'}
+        size={24}
+        space="md"
+        textSize="4xl"
+      />
+      <StackedAvatars
+        avatars={new Array(3).fill('')}
+        countDisplayed={4}
+        link={'/'}
+        size={10}
+        space="xl"
+        textSize="sm"
+      />
+
+      {/* Cards */}
       <Card
         pseudo={'Raynh'}
-        description={
-          'Nostrud ea eu elit sint pariatur culpa proident consequat consectetur. Cupidatat ea deserunt ut ut esse consectetur minim sit consequat nisi. Incididunt cupidatat Lorem sunt esse aliqua qui exercitation esse ex veniam non. Excepteur eu sit reprehenderit commodo consectetur voluptate duis nulla exercitation esse.'
-        }
+        // description={
+        //   'Nostrud ea eu elit sint pariatur culpa proident consequat consectetur. Cupidatat ea deserunt ut ut esse consectetur minim sit consequat nisi. Incididunt cupidatat Lorem sunt esse aliqua qui exercitation esse ex veniam non. Excepteur eu sit reprehenderit commodo consectetur voluptate duis nulla exercitation esse.'
+        // }
         avatar={image}
         tags={[
           'Python',
