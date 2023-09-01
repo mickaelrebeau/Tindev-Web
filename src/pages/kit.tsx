@@ -8,6 +8,7 @@ import { Tag } from '@/components/kit/Utilitaries/Tag'
 import { Card } from '@/components/card/Card'
 import image from '@/assets/moi.jpg'
 import { StackedAvatars } from '@/components/ui/StackedAvatars'
+import { faker } from '@faker-js/faker'
 
 export function Kit() {
   return (
@@ -35,7 +36,7 @@ export function Kit() {
 
       {/* Stacked avatars */}
       <StackedAvatars
-        avatars={new Array(10).fill('')}
+        avatars={Array.from({ length: 10 }, () => faker.image.avatar())}
         countDisplayed={5}
         link={'/'}
         size={24}
@@ -43,7 +44,7 @@ export function Kit() {
         textSize="4xl"
       />
       <StackedAvatars
-        avatars={new Array(3).fill('')}
+        avatars={Array.from({ length: 3 }, () => faker.image.avatar())}
         countDisplayed={4}
         link={'/'}
         size={10}
