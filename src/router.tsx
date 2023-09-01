@@ -1,8 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import { App } from '@/App'
-import { Index } from '@/pages/index'
+import { Home } from '@/pages/home'
 import { Kit } from '@/pages/kit'
+import { Profil } from './pages/profil'
+import { Messages } from './pages/messages'
 
 export const router = createBrowserRouter([
   {
@@ -11,7 +13,15 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Index />,
+        element: <Home />,
+      },
+      {
+        path: '/messages',
+        element: <Messages />,
+      },
+      {
+        path: '/profil',
+        element: <Profil />,
       },
       {
         path: '/kit',
