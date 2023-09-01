@@ -1,3 +1,4 @@
+
 export function Home() {
   return (
     <section className="text-slate-100">
