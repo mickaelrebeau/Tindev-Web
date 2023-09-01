@@ -15,6 +15,7 @@ export function NavBar() {
           <NavItem to="/profil">Profil</NavItem>
           <NavItem to="/kit">Kit</NavItem>
         </nav>
+
         <div className={`menu-button md:hidden}`}>
           <div className="menu-icon">
             <span className="bar"></span>
