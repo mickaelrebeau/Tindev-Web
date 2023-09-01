@@ -13,8 +13,8 @@ export function Kit() {
   return (
     <div className="">
       {/* Titles */}
-      <FirstTitle title="Titre 1" />
-      <SecondaryTitle title="Titre 2" />
+      <FirstTitle>Titre 1</FirstTitle>
+      <SecondaryTitle>Titre 2</SecondaryTitle>
 
       {/* Buttons */}
       <PrimaryButton>Button 1</PrimaryButton>
