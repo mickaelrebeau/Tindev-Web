@@ -1,4 +1,4 @@
-export function AppFooter() {
+export function Footer() {
   return (
     <>
       <footer className="fixed bottom-0 left-0 w-full bg-gray-900 text-white py-4 px-4">

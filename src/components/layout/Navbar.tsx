@@ -1,6 +1,6 @@
 import { DiCodeigniter } from 'react-icons/di'
 
-export function AppNavBar() {
+export function NavBar() {
   return (
     <>
       <div className="navbar bg-gray-900 text-white py-3 px-4 flex items-center">
