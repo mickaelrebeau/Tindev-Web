@@ -24,12 +24,11 @@ export function Card({ pseudo, description, avatar, tags, reseaux }: Props) {
 
       <main>
         <Paragraph content={description} />
-
-        <ul className="grid grid-cols-3 mb-4 gap-2">
+        <aside className="grid grid-cols-3 mb-4 gap-2">
           {tags.map((tag) => (
             <Tag key={tag} content={tag} />
           ))}
-        </ul>
+        </aside>
       </main>
 
       <footer className="grid grid-cols-8 w-full h-fit gap-2">
