@@ -16,15 +16,16 @@ import { TheirMessage } from '@/components/ui/message/TheirMessage'
 
 export function Messages() {
   return (
-    <section className="text-slate-100 pb-20">
-      {' '}
+    <section className="text-slate-100">
+      <div className=" min-h-[calc(100vh-50vh)] min-w-[calc(100vw-50vw)] max-w-[780px] max-h-[780px] w-full h-full md:min-h-[780px] md:min-w-[780px] rounded-full absolute top-1/3 -z-1 gradient-1 blur-[150px]  -translate-y-1/2 -translate-x-1/2 left-2/3" />
+      <div className="w-full h-full max-w-[394px] max-h-[560px] gradient-2 absolute top-1/2 -translate-x-1/2 left-1/3 opacity-100 blur-[150px] translate-y-1/2 lg:translate-y-1/3 -z-1" />
       {/* TODO: Remove `pb-20` */}
       {/* <SecondaryTitle className="mb-3">Messages</SecondaryTitle>
 
       {messages2.map((message) => (
         <Message key={message.id} {...message} id={message.id} />
       ))} */}
-      <div className="grid grid-cols-messages grid-rows-messages divide-x-2 ">
+      <div className="grid grid-cols-messages grid-rows-messages divide-x-2 h-[calc(100vh-6rem)] overflow-hidden ">
         <div className="row-start-1 row-end-2 col-start-1 col-end-2">
           Profile
         </div>
