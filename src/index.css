@@ -20,10 +20,9 @@ body {
   pointer-events: none;
   opacity: 1;
   background-blend-mode: normal;
-  background-image: url('../public/background_noisy.webp');
+  background-image: url('/background_noisy.webp');
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: -1;
   height: 100vh;
   width: 100vw;
