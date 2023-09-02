@@ -1,7 +1,6 @@
-import './App.css'
 import { Outlet, useLocation } from 'react-router-dom'
 import { Footer, NavBar } from '@/components/layout'
-import { cn } from './lib/utils'
+import { cn } from '@/lib/utils'
 
 export function App() {
   const { pathname } = useLocation()
