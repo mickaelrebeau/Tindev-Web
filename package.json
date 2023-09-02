@@ -36,6 +36,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "fishery": "^2.2.2",
     "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "postcss": "^8.4.29",
     "prettier": "3.0.3",
     "tailwind-merge": "^1.14.0",
@@ -45,5 +46,13 @@
   },
   "engines": {
     "node": ">= 18"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "prettier --write"
   }
 }
