@@ -6,17 +6,18 @@ export function App() {
   const { pathname } = useLocation()
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <NavBar />
+      {/* TODO: Mettre ca directement sur section */}
       <div id="background"></div>
-      <div
-        className={cn('pt-14', {
-          'p-12 w-9/12 max-w-screen-xl m-auto': pathname !== '/messages',
-          // 'overflow-hidden': pathname === '/messages',
+      <section
+        className={cn('text-slate-100 h-[calc(100vh_-_60px_-_60px)]', {
+          'p-12 w-9/12 max-w-screen-xl m-auto overflow-auto':
+            pathname !== '/messages',
         })}>
         <Outlet />
-      </div>
+      </section>
       <Footer />
-    </>
+    </div>
   )
 }

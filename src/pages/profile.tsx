@@ -1,3 +1,7 @@
 export function Profile() {
-  return <section className="text-slate-100">Profile</section>
+  return (
+    <>
+      <h2>Profile</h2>
+    </>
+  )
 }

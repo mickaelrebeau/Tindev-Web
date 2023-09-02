@@ -12,7 +12,7 @@ import image from '@/assets/moi.jpg'
 
 export function Kit() {
   return (
-    <div className="">
+    <>
       {/* Titles */}
       <FirstTitle>Titre 1</FirstTitle>
       <SecondaryTitle>Titre 2</SecondaryTitle>
@@ -89,6 +89,6 @@ export function Kit() {
           { name: 'twitch', link: 'https://github.com/RaphHuynh' },
         ]}
       />
-    </div>
+    </>
   )
 }

@@ -1,7 +1,7 @@
 export function Home() {
   return (
-    <section className="text-slate-100">
+    <div className="h-[200vh]">
       <h2>pleins d'amours</h2>
-    </section>
+    </div>
   )
 }

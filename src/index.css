@@ -12,6 +12,10 @@
   src: url('./assets/fonts/Satoshi-Bold.otf') format('opentype');
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   background-color: rgb(9, 15, 22);
 }
@@ -28,10 +32,10 @@ body {
   width: 100vw;
 }
 
-.main {
+/* .main {
   position: relative;
   z-index: 1;
-}
+} */
 
 .gradient-1 {
   background-image: linear-gradient(180deg, #00c2ff, #ff29c3);
