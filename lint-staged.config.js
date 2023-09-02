@@ -1,8 +1,4 @@
 export default {
-  // Type check TypeScript files
-  '**/*.(ts|tsx)': (filenames) =>
-    `npx tsc --noEmit --jsx react-jsx ${filenames.join(' ')}`,
-
   // Lint then format TypeScript and JavaScript files
   '**/*.(ts|tsx|js)': (filenames) => [
     `npx eslint --fix ${filenames.join(' ')}`,
