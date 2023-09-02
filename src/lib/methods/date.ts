@@ -19,9 +19,12 @@ export function formatDateWithTime(date: Date) {
 }
 
 export function generateSortedDates(nb: number) {
-  return Array.from({ length: nb })
-    .map(() => faker.date.past())
-    .sort((a, b) => a.getTime() - b.getTime())
+  return (
+    Array.from({ length: nb })
+      // .map(() => faker.date.past())
+      .map(() => faker.date.recent())
+      .sort((a, b) => a.getTime() - b.getTime())
+  )
 }
 
 export function isSameDay(date1_: Date, date2_: Date) {
@@ -36,7 +39,7 @@ export function isSameDay(date1_: Date, date2_: Date) {
     date2_.getDate()
   )
 
-  return date1 === date2
+  return date1.getTime() === date2.getTime()
 }
 
 export function isYesterday(date: Date) {
