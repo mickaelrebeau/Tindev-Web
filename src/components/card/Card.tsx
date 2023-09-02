@@ -1,6 +1,6 @@
-import { SecondaryTitle } from '../kit/Title/SecondarytTitle'
-import { Paragraph } from '../kit/Utilitaries/Paragraph'
-import { Tag } from '../kit/Utilitaries/Tag'
+import { SecondaryTitle } from '@/components/kit/Title/SecondarytTitle'
+import { Paragraph } from '@/components/kit/Utilitaries/Paragraph'
+import { Tag } from '@/components/kit/Utilitaries/Tag'
 
 interface Props {
   pseudo?: string
@@ -32,7 +32,7 @@ export function Card({
             src={avatar}
             className="rounded-full object-cover w-20 h-20 border"
           />
-          <SecondaryTitle title={pseudo} />
+          <SecondaryTitle>{pseudo}</SecondaryTitle>
         </div>
         <Paragraph
           className={
