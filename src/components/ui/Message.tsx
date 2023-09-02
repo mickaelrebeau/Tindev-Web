@@ -1,7 +1,7 @@
 import { users } from '@/lib/data/users'
 import { Paragraph } from '../kit/Utilitaries/Paragraph'
 import { assertsNotNull } from '@/lib/utils'
-import { Avatar } from './Avatar'
+import { Avatar } from './avatar/Avatar'
 import { TertiaryTitle } from '../kit/Title/TertiaryTitle'
 
 type Props = Message2
