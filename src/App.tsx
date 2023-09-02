@@ -9,9 +9,11 @@ export function App() {
   return (
     <>
       <NavBar />
+      <div id="background"></div>
       <div
         className={cn('pt-14', {
           'p-12 w-9/12 max-w-screen-xl m-auto': pathname !== '/messages',
+          // 'overflow-hidden': pathname === '/messages',
         })}>
         <Outlet />
       </div>
