@@ -19,11 +19,7 @@ const styles = {
   },
 }
 
-export const Message = ({
-  children,
-  date = '01 aout 2023 22:22',
-  from,
-}: Props) => {
+export const Message = ({ children, date, from }: Props) => {
   return (
     <div className={cn('w-full flex', styles[from].wrapper)}>
       <div className={'max-w-[45%]'}>
