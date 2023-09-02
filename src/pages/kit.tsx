@@ -23,6 +23,14 @@ export function Kit() {
       <TertiaryButton>Button 3</TertiaryButton>
 
       {/* Paragraphs */}
+      <Paragraph>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+        distinctio dolorum quod repudiandae, voluptate itaque deleniti, nobis,
+        nulla dignissimos expedita eligendi? Quam tenetur nihil eius labore
+        consequatur fugit. Itaque odit repudiandae repellat consequatur eaque a
+        qui, excepturi deleniti ullam exercitationem, ipsam tempore aperiam in
+        laborum. Suscipit molestiae quos reprehenderit repudiandae.
+      </Paragraph>
       <Paragraph className={'dark:text-red-700'}>
         Nostrud ea eu elit sint pariatur culpa proident consequat consectetur.
         Cupidatat ea deserunt ut ut esse consectetur minim sit consequat nisi.
@@ -32,7 +40,13 @@ export function Kit() {
       </Paragraph>
 
       {/* Tags */}
-      <Tag>Python</Tag>
+      <div className="mb-5 flex gap-2">
+        <Tag>Python</Tag>
+        <Tag className="bg-blue-500">Python</Tag>
+        <Tag className="bg-green-500 border border-green-500 dark:border-slate-900 dark:text-slate-900 cursor-pointer hover:bg-green-400">
+          Python
+        </Tag>
+      </div>
 
       {/* Stacked avatars */}
       <StackedAvatars
