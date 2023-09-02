@@ -38,21 +38,17 @@ export function Messages() {
           {/* <div className="w-full h-full overflow-auto px-2 flex flex-col gap-4"> */}
           <div className="w-full px-2 flex flex-col gap-4">
             {messages.map((message) => {
-              const isSameDate = lastDate.current
+              const isSameDateThanPrevious = lastDate.current
                 ? isSameDay(lastDate.current, message.date)
                 : false
               lastDate.current = message.date
 
               return (
                 <React.Fragment key={message.id}>
-                  {!isSameDate && <DividerAuto date={message.date} />}
-                  {/* <DividerAuto date={ }> */}
-                  {/* <Divider date={'Hier'} /> */}
-                  {/* 
-                Si la date est plus vieux d'une semaine => 25 aout 2023
-                Si la date est le jour de la semaine => mardi
-                Si la date est le jour d'avant => hier
-                */}
+                  {!isSameDateThanPrevious && (
+                    <DividerAuto date={message.date} />
+                  )}
+
                   <Message
                     from={currentId === message.userId ? 'me' : 'him'}
                     date={formatDateWithTime(message.date)}>

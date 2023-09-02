@@ -19,12 +19,17 @@ export function formatDateWithTime(date: Date) {
 }
 
 export function generateSortedDates(nb: number) {
-  return (
-    Array.from({ length: nb })
-      // .map(() => faker.date.past())
-      .map(() => faker.date.recent())
-      .sort((a, b) => a.getTime() - b.getTime())
+  const recent = faker.number.int({ min: Math.min(5, nb), max: nb })
+  const datesRecent = Array.from({ length: recent }).map(() =>
+    faker.date.recent()
   )
+  const datesPast = Array.from({ length: nb - recent }).map(() =>
+    faker.date.past()
+  )
+
+  return [datesPast, datesRecent]
+    .flat()
+    .sort((a, b) => a.getTime() - b.getTime())
 }
 
 export function isSameDay(date1_: Date, date2_: Date) {
