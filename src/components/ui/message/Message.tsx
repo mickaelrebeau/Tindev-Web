@@ -9,12 +9,12 @@ type Props = PropsWithChildren<{
 const styles = {
   him: {
     wrapper: 'justify-start',
-    content: 'rounded-bl-none text-slate-800 bg-purple-300 border-purple-600',
+    content: 'rounded-bl-none bg-purple-300 border-purple-600',
     date: 'text-end',
   },
   me: {
     wrapper: 'justify-end',
-    content: 'rounded-br-none text-slate-800 bg-indigo-300 border-indigo-600',
+    content: 'rounded-br-none bg-indigo-300 border-indigo-600',
     date: 'text-start',
   },
 }
@@ -29,7 +29,7 @@ export const Message = ({
       <div className={'max-w-[45%]'}>
         <p
           className={cn(
-            'rounded-2xl py-2 px-4 border-2',
+            'rounded-2xl py-2 px-4 border-2 text-slate-800',
             styles[from].content
           )}>
           {children}
