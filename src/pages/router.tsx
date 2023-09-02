@@ -1,10 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
-
 import { App } from '@/App'
-import { Home } from '@/pages/home'
-import { Kit } from '@/pages/kit'
-import { Profil } from './pages/profil'
-import { Messages } from './pages/messages'
+import { Home, Kit, Messages, Profile } from '@/pages'
 
 export const router = createBrowserRouter([
   {
@@ -21,7 +17,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/profil',
-        element: <Profil />,
+        element: <Profile />,
       },
       {
         path: '/kit',
