@@ -3,18 +3,17 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "bespokeSans";
-  src: url("./assets/fonts/GeneralSans-Regular.otf" ) format("opentype");
+    font-family: "bespokeSans";
+    src: url("./assets/fonts/GeneralSans-Regular.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "Expose";
-  src: url("./assets/fonts/Satoshi-Bold.otf") format("opentype");
+    font-family: "Expose";
+    src: url("./assets/fonts/Satoshi-Bold.otf") format("opentype");
 }
 
 body {
     background-color: rgb(9, 15, 22);
-
 }
 
 #background {
@@ -45,32 +44,32 @@ body {
 
 @media (prefers-color-scheme: dark) {
 
-  body {
-    background-color: #09090b;
-  }
-  
+    body {
+        background-color: #09090b;
+    }
+
 }
 
 * {
-  font-family: "bespokeSans";
+    font-family: "bespokeSans";
 }
 
 h1, h2, h3 {
-  font-family: "Expose";
+    font-family: "Expose";
 }
 
 .card {
-  position: relative;
+    position: relative;
 }
 
 .card:before {
-  content: "";
-  pointer-events: none;
-  user-select: none;
-  position: absolute;
-  inset: 0px;
-  border-radius: inherit;
-  padding: 3px;
-  -webkit-mask: linear-gradient(black, black) content-box content-box, linear-gradient(black, black);
-  -webkit-mask-composite: xor;
+    content: "";
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    padding: 3px;
+    -webkit-mask: linear-gradient(black, black) content-box content-box, linear-gradient(black, black);
+    -webkit-mask-composite: xor;
 }
