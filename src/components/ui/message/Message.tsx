@@ -1,5 +1,5 @@
-import { cn } from '@/lib/utils'
 import { PropsWithChildren } from 'react'
+import { cn } from '@/lib/utils'
 
 type Props = PropsWithChildren<{
   date?: string
@@ -10,12 +10,12 @@ const styles = {
   him: {
     wrapper: 'justify-start',
     content: 'rounded-bl-none bg-purple-300 border-purple-600',
-    date: 'text-end',
+    date: 'text-start',
   },
   me: {
     wrapper: 'justify-end',
     content: 'rounded-br-none bg-indigo-300 border-indigo-600',
-    date: 'text-start',
+    date: 'text-end',
   },
 }
 
