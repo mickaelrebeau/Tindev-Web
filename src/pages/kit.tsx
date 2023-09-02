@@ -1,14 +1,14 @@
+import { faker } from '@faker-js/faker'
+import { Card } from '@/components/card/Card'
 import { PrimaryButton } from '@/components/kit/Button/PrimaryButton'
 import { SecondaryButton } from '@/components/kit/Button/SecondaryButton'
 import { TertiaryButton } from '@/components/kit/Button/TertiaryButton'
-import { Paragraph } from '@/components/kit/Utilitaries/Paragraph'
 import { FirstTitle } from '@/components/kit/Title/FirstTitle'
 import { SecondaryTitle } from '@/components/kit/Title/SecondarytTitle'
+import { Paragraph } from '@/components/kit/Utilitaries/Paragraph'
 import { Tag } from '@/components/kit/Utilitaries/Tag'
-import { Card } from '@/components/card/Card'
-import image from '@/assets/moi.jpg'
 import { StackedAvatars } from '@/components/ui/avatar/StackedAvatars'
-import { faker } from '@faker-js/faker'
+import image from '@/assets/moi.jpg'
 
 export function Kit() {
   return (

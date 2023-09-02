@@ -1,11 +1,10 @@
 // import { SecondaryTitle } from '@/components/kit/Title/SecondarytTitle'
 // import { Message } from '@/components/ui/Message'
 // import { messages2 } from '@/lib/data/messages'
-
-import { MyMessage } from '@/components/ui/message/MyMessage'
-import { TheirMessage } from '@/components/ui/message/TheirMessage'
 import { Divider } from '@/components/ui/message/Divider'
 import { Message } from '@/components/ui/message/Message'
+import { MyMessage } from '@/components/ui/message/MyMessage'
+import { TheirMessage } from '@/components/ui/message/TheirMessage'
 
 // TODO : Ajouter le choix de la couleur des messages  a l'utilisateur
 // TODO : WEB SOCKET
