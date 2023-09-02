@@ -31,3 +31,19 @@ body {
 h1, h2, h3 {
   font-family: "Expose";
 }
+
+.card {
+  position: relative;
+}
+
+.card:before {
+  content: "";
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  inset: 0px;
+  border-radius: inherit;
+  padding: 3px;
+  -webkit-mask: linear-gradient(black, black) content-box content-box, linear-gradient(black, black);
+  -webkit-mask-composite: xor;
+}

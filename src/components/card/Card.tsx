@@ -25,7 +25,7 @@ export function Card({
   tags,
 }: Props) {
   return (
-    <article className="p-5 my-4 mx-auto  h-full text-black rounded-lg border-lg border dark:border-black dark:bg-slate-800 bg-slate-300 min-w-[50%]  ">
+    <article className="p-5 my-4 mx-auto  h-full text-black rounded-lg border-lg border dark:border-black dark:bg-slate-800 bg-slate-300 min-w-[50%] card before:bg-gradient-to-r from-blue-300 via-transparent to-blue-300">
       <header className="flex flex-col justify-start items-start w-content mb-2">
         <div className="flex justify-start items-center gap-5 w-content">
           <img
