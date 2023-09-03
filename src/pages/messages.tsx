@@ -1,9 +1,5 @@
-import React, { useRef } from 'react'
-import { faker } from '@faker-js/faker'
-import { DividerAuto } from '@/components/ui/message/Divider'
-import { Message } from '@/components/ui/message/Message'
-import { messages } from '@/lib/data/messages'
-import { formatDateWithTime, isSameDay } from '@/lib/methods/date'
+import { Chat } from '@/components/ui/message/Chat'
+import { MatchProfile } from '@/components/ui/message/MatchProfile'
 
 // TODO : Ajouter le choix de la couleur des messages  a l'utilisateur
 // TODO : WEB SOCKET
@@ -14,9 +10,6 @@ import { formatDateWithTime, isSameDay } from '@/lib/methods/date'
 // prendre en charge le code
 
 export function Messages() {
-  const lastDate = useRef<Date | null>(null)
-  const currentId = faker.number.int(1)
-
   return (
     <>
       <div className="min-h-[calc(100vh-50vh)] min-w-[calc(100vw-50vw)] max-w-[780px] max-h-[780px] w-full h-full md:min-h-[780px] md:min-w-[780px] rounded-full absolute top-1/3 -z-1 gradient-1 blur-[150px] -translate-y-1/2 -translate-x-1/2 left-2/3" />
@@ -32,31 +25,10 @@ export function Messages() {
           Messages
         </div>
         <div className="row-start-1 row-end-4 col-start-2 col-end-3 border-l-2 border-r-2 h-[inherit]">
-          <div className="w-full px-2 flex flex-col gap-4 h-[inherit] scrollbar-stable overflow-y-hidden round hover:overflow-y-auto scrollbar-w-3 scrollbar-rounded-track scrollbar-rounded-thumb scrollbar-shadow-track scrollbar-shadow-thumb">
-            {messages.map((message) => {
-              const isSameDateThanPrevious = lastDate.current
-                ? isSameDay(lastDate.current, message.date)
-                : false
-              lastDate.current = message.date
-
-              return (
-                <React.Fragment key={message.id}>
-                  {!isSameDateThanPrevious && (
-                    <DividerAuto date={message.date} />
-                  )}
-
-                  <Message
-                    from={currentId === message.userId ? 'me' : 'him'}
-                    date={formatDateWithTime(message.date)}>
-                    {message.content}
-                  </Message>
-                </React.Fragment>
-              )
-            })}
-          </div>
+          <Chat />
         </div>
         <div className="row-start-1 row-end-4 col-start-3 col-end-4">
-          MatchProfile
+          <MatchProfile />
         </div>
       </div>
     </>
