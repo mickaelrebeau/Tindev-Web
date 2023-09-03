@@ -82,7 +82,7 @@ export default {
         'in-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
       gridTemplateColumns: {
-        messages: '500px minmax(900px, 1fr) 300px',
+        messages: 'minmax(300px, 500px) minmax(500px, 1fr) 300px',
       },
       gridTemplateRows: {
         messages: '80px 150px 1fr',

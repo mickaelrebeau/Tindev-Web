@@ -22,7 +22,7 @@ const styles = {
 export const Message = ({ children, date, from }: Props) => {
   return (
     <div className={cn('w-full flex', styles[from].wrapper)}>
-      <div className={'max-w-[45%]'}>
+      <div className={'max-w-[75%]'}>
         <p
           className={cn(
             'rounded-2xl py-2 px-4 border-2 text-slate-800',

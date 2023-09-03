@@ -12,7 +12,7 @@ type DividerProps = {
 export const Divider = ({ text = '' }: DividerProps) => {
   return (
     <>
-      <div className={'flex items-center px-12'}>
+      <div className={'flex items-center px-[clamp(0.5rem,_2.5vw,_2rem)]'}>
         <div className={'w-full h-px bg-slate-800 '} />
 
         <p className={'text-slate-300 text-sm mt-1 mx-6 min-w-fit'}>{text}</p>
