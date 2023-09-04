@@ -1,10 +1,10 @@
 import { faker } from '@faker-js/faker'
+import { getAge } from '@/lib/methods/date'
 import { SliderPhotos } from '../SliderPhotos'
 
 export function MatchProfile() {
   return (
     <>
-      MatchProfile
       {/* photos */}
       <SliderPhotos
         photos={Array.from(
@@ -14,9 +14,21 @@ export function MatchProfile() {
           }
         )}
       />
-      {/* Name + age */}
-      {/* Title */}
-      {/* Bio */}
+      <main className="p-4">
+        <h2>Forth, {getAge(new Date(2000, 1, 1))} ans</h2>
+        <h3 className="text-slate-300">Développeur Web chez Tindev</h3>
+        {/* TODO: Améliorer le height car très moche actuellement ! */}
+        <p className="overflow-auto h-[calc(100vh_-_60px_-_60px_-_300px_-_150px)]">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
+          maxime molestias cumque culpa, optio, facilis aperiam reprehenderit
+          voluptatibus exercitationem obcaecati architecto accusantium? Ab harum
+          tenetur eum animi. Atque, nemo nisi minus quis vitae inventore illum
+          deserunt aut facere fugiat consectetur saepe officia, debitis placeat
+          incidunt quam vel sint totam, tenetur modi architecto natus eligendi
+          dolore? Quod, ipsam eius, corrupti nam accusamus pariatur non, et
+          laboriosam excepturi consequuntur praesentium nihil.
+        </p>
+      </main>
     </>
   )
 }
