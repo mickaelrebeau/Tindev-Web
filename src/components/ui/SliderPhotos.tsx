@@ -5,6 +5,8 @@ type Props = {
   photos: string[]
 }
 
+// TODO: Adapter les styles pour plus de lisibilité
+
 export function SliderPhotos({ photos }: Props) {
   const [currentPhoto, setCurrentPhoto] = useState(0)
 
@@ -22,9 +24,10 @@ export function SliderPhotos({ photos }: Props) {
       className="relative w-full"
       data-carousel="slide">
       {/* Carousel wrapper */}
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <div className="relative h-56 overflow-hidden md:h-96">
         {photos.map((photo, i) => (
           <div
+            key={i}
             className={cn('duration-700 ease-in-out', {
               hidden: currentPhoto !== i,
             })}
@@ -41,6 +44,7 @@ export function SliderPhotos({ photos }: Props) {
       <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
         {Array.from({ length: photos.length }, (_, i) => (
           <button
+            key={i}
             type="button"
             className={cn(
               'w-3 h-3 rounded-full bg-slate-100 border border-slate-800',
@@ -70,9 +74,9 @@ export function SliderPhotos({ photos }: Props) {
             viewBox="0 0 6 10">
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M5 1 1 5l4 4"
             />
           </svg>
@@ -93,9 +97,9 @@ export function SliderPhotos({ photos }: Props) {
             viewBox="0 0 6 10">
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="m1 9 4-4-4-4"
             />
           </svg>
