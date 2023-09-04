@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker'
-import { Card } from '@/components/card/Card'
+import { Card } from '@/components/card/UserCard'
 import { PrimaryButton } from '@/components/kit/Button/PrimaryButton'
 import { SecondaryButton } from '@/components/kit/Button/SecondaryButton'
 import { TertiaryButton } from '@/components/kit/Button/TertiaryButton'
