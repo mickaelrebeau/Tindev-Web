@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/methods/utils'
 
 //? Version avec string, sans controle de la classe from-color et to-color
 

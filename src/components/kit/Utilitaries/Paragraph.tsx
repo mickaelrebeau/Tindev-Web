@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react'
-import { cn } from '@/lib/utils.ts'
+import { cn } from '@/lib/methods/utils'
 
 type Props = PropsWithChildren<{ className?: string }>
 

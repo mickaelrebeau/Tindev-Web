@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/methods/utils'
 import { Avatar } from './Avatar'
 
 type Props = {

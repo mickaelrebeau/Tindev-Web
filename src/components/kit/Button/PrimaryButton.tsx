@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/methods/utils'
 import Button, { ButtonProps } from './Button'
 
 export function PrimaryButton({ children, className, ...props }: ButtonProps) {

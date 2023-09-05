@@ -1,5 +1,5 @@
 import { dict_network } from '@/lib/data/network'
-import { assertsNotNull } from '@/lib/utils'
+import { assertsNotNull } from '@/lib/methods/utils'
 
 export function Network({ name, link }: Network) {
   const net = dict_network.find((dict) => dict.name === name)

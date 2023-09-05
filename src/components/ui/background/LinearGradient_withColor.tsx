@@ -1,5 +1,5 @@
 import { assertsHexaColors } from '@/lib/methods/string'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/methods/utils'
 
 //? Version avec Color qui controle la classe from-color et to-color
 // Selon moi, la version avec string est mieux !

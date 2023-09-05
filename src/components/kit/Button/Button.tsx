@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes, PropsWithChildren } from 'react'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/methods/utils'
 
 export type ButtonProps = PropsWithChildren<
   ButtonHTMLAttributes<HTMLButtonElement>

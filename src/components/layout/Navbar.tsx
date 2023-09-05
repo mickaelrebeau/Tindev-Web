@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/methods/utils'
 import logo from '@/assets/logo.png'
 import { NavItem } from '../ui/NavItem'
 
