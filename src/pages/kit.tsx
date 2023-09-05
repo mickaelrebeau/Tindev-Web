@@ -43,7 +43,7 @@ export function Kit() {
       <div className="mb-5 flex gap-2">
         <Tag>Python</Tag>
         <Tag className="bg-blue-500">Python</Tag>
-        <Tag className="bg-green-500 border border-green-500 dark:border-slate-900 dark:text-slate-900 cursor-pointer hover:bg-green-400">
+        <Tag className="cursor-pointer border border-green-500 bg-green-500 hover:bg-green-400 dark:border-slate-900 dark:text-slate-900">
           Python
         </Tag>
       </div>

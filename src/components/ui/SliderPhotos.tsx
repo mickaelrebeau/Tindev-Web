@@ -34,20 +34,20 @@ export function SliderPhotos({ photos }: Props) {
             data-carousel-item>
             <img
               src={photo}
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
+              className="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2 object-cover"
               alt="..."
             />
           </div>
         ))}
       </div>
       {/* Slider indicators */}
-      <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+      <div className="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3">
         {Array.from({ length: photos.length }, (_, i) => (
           <button
             key={i}
             type="button"
             className={cn(
-              'w-3 h-3 rounded-full bg-slate-100 border border-slate-800',
+              'h-3 w-3 rounded-full border border-slate-800 bg-slate-100',
               {
                 'bg-slate-800': currentPhoto === i,
               }
@@ -62,12 +62,12 @@ export function SliderPhotos({ photos }: Props) {
       {/* Slider controls */}
       <button
         type="button"
-        className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        className="group absolute left-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
         data-carousel-prev
         onClick={prevPhoto}>
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70">
           <svg
-            className="w-4 h-4 text-white dark:text-gray-800"
+            className="h-4 w-4 text-white dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -85,12 +85,12 @@ export function SliderPhotos({ photos }: Props) {
       </button>
       <button
         type="button"
-        className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        className="group absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
         data-carousel-next
         onClick={nextPhoto}>
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70">
           <svg
-            className="w-4 h-4 text-white dark:text-gray-800"
+            className="h-4 w-4 text-white dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

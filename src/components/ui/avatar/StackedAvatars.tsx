@@ -103,7 +103,7 @@ export function StackedAvatars({
   }
 
   return (
-    <div className={cn('flex mb-5', classSpace)}>
+    <div className={cn('mb-5 flex', classSpace)}>
       {avatars.slice(0, countDisplayed).map((src, index) => (
         <Avatar
           key={index}
@@ -115,7 +115,7 @@ export function StackedAvatars({
       {avatars.length > countDisplayed && (
         <a
           className={cn(
-            'flex items-center justify-center w-10 h-10 font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800',
+            'flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-gray-700 font-medium text-white hover:bg-gray-600 dark:border-gray-800',
             classSize,
             classText
           )}

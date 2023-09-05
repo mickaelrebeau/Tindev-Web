@@ -10,10 +10,10 @@ export function NavBar({ className }: Props) {
   return (
     <div
       className={cn(
-        'bg-gray-900 text-white py-3 px-4 flex items-center gap-4 h-15',
+        'flex h-15 items-center gap-4 bg-gray-900 px-4 py-3 text-white',
         className
       )}>
-      <img src={logo} alt="Logo" className="h-10 -mt-2" />
+      <img src={logo} alt="Logo" className="-mt-2 h-10" />
 
       <nav className="md:flex md:gap-6">
         <NavItem to="/">Accueil</NavItem>

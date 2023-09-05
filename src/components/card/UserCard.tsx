@@ -25,35 +25,35 @@ export function Card({
   tags,
 }: Props) {
   return (
-    <article className="p-5 my-4 mx-auto  h-full text-black rounded-lg border-lg border dark:border-black dark:bg-slate-800 bg-slate-300 min-w-[50%] card before:bg-gradient-to-r from-blue-300 via-transparent to-blue-300">
-      <header className="flex flex-col justify-start items-start w-content mb-2">
-        <div className="flex justify-start items-center gap-5 w-content">
+    <article className="border-lg card mx-auto  my-4 h-full min-w-[50%] rounded-lg border bg-slate-300 from-blue-300 via-transparent to-blue-300 p-5 text-black before:bg-gradient-to-r dark:border-black dark:bg-slate-800">
+      <header className="w-content mb-2 flex flex-col items-start justify-start">
+        <div className="w-content flex items-center justify-start gap-5">
           <img
             src={avatar}
-            className="rounded-full object-cover w-20 h-20 border"
+            className="h-20 w-20 rounded-full border object-cover"
           />
           <SecondaryTitle>{pseudo}</SecondaryTitle>
         </div>
         <Paragraph
           className={
-            'dark:text-green-600 text-green-600 flex items-center justify-start'
+            'flex items-center justify-start text-green-600 dark:text-green-600'
           }>
           🟢 Online
         </Paragraph>
       </header>
 
       <main>
-        <aside className="flex flex-col justfy-center  w-[30%]">
+        <aside className="justfy-center flex w-[30%]  flex-col">
           <div>
-            <Paragraph className={'md:text-3xl font-bold'}>About me</Paragraph>
+            <Paragraph className={'font-bold md:text-3xl'}>About me</Paragraph>
 
             <Paragraph>{about}</Paragraph>
           </div>
 
           <div>
-            <Paragraph className={'md:text-3xl font-bold'}>Tags</Paragraph>
+            <Paragraph className={'font-bold md:text-3xl'}>Tags</Paragraph>
 
-            <div className={'flex justify-start items-center flex-wrap gap-3'}>
+            <div className={'flex flex-wrap items-center justify-start gap-3'}>
               {tags.map((tag) => {
                 const randomColor =
                   colors[Math.floor(Math.random() * colors.length)]
@@ -71,24 +71,24 @@ export function Card({
             </div>
           </div>
           <div>
-            <Paragraph className={'md:text-3xl font-bold'}>Relations</Paragraph>
+            <Paragraph className={'font-bold md:text-3xl'}>Relations</Paragraph>
 
-            <div className={'flex justify-start items-center pl-6 '}>
-              <div className={'h-18 w-18 rounded-full bg-red-300 -mx-6'}></div>
-              <div className={'h-18 w-18 rounded-full bg-blue-300 -mx-6'}></div>
+            <div className={'flex items-center justify-start pl-6 '}>
+              <div className={'-mx-6 h-18 w-18 rounded-full bg-red-300'}></div>
+              <div className={'-mx-6 h-18 w-18 rounded-full bg-blue-300'}></div>
               <div
-                className={'h-18 w-18 rounded-full bg-yellow-300 -mx-6'}></div>
+                className={'-mx-6 h-18 w-18 rounded-full bg-yellow-300'}></div>
               <div
-                className={'h-18 w-18 rounded-full bg-green-300 -mx-6'}></div>
-              <div className={'h-18 w-18 rounded-full bg-red-300 -mx-6'}></div>
-              <div className={'h-18 w-18 rounded-full bg-blue-300 -mx-6'}></div>
+                className={'-mx-6 h-18 w-18 rounded-full bg-green-300'}></div>
+              <div className={'-mx-6 h-18 w-18 rounded-full bg-red-300'}></div>
+              <div className={'-mx-6 h-18 w-18 rounded-full bg-blue-300'}></div>
               <div
-                className={'h-18 w-18 rounded-full bg-yellow-300 -mx-6'}></div>
+                className={'-mx-6 h-18 w-18 rounded-full bg-yellow-300'}></div>
               <div
-                className={'h-18 w-18 rounded-full bg-purple-300 -mx-6'}></div>
+                className={'-mx-6 h-18 w-18 rounded-full bg-purple-300'}></div>
               <div
                 className={
-                  'h-18 w-18 rounded-full bg-blue-300 -mx-6 flex justify-center items-center text-3xl font-bold'
+                  '-mx-6 flex h-18 w-18 items-center justify-center rounded-full bg-blue-300 text-3xl font-bold'
                 }>
                 {' '}
                 +8

@@ -9,7 +9,7 @@ export function SecondaryButton({
   return (
     <Button
       className={cn(
-        'text-sky-600 bg-zinc-50 border border-sky-600 hover:bg-sky-600 hover:text-zinc-50 dark:bg-zinc-950 hover:dark:text-zinc-950',
+        'border border-sky-600 bg-zinc-50 text-sky-600 hover:bg-sky-600 hover:text-zinc-50 dark:bg-zinc-950 hover:dark:text-zinc-950',
         className
       )}
       {...props}>

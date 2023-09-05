@@ -9,7 +9,7 @@ export function Avatar({ src, className }: Props) {
   return (
     <img
       className={cn(
-        'w-10 h-10 border-2 border-white rounded-full dark:border-gray-800',
+        'h-10 w-10 rounded-full border-2 border-white dark:border-gray-800',
         className
       )}
       src={src}

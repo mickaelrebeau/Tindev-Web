@@ -13,7 +13,7 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button
-      className={cn('text-lg w-fit px-3 py-2 m-4 rounded-md', className)}
+      className={cn('m-4 w-fit rounded-md px-3 py-2 text-lg', className)}
       type={type}
       {...props}>
       {children}

@@ -1,6 +1,6 @@
-import { cn } from '@/lib/utils'
 import { PropsWithChildren } from 'react'
 import { NavLink } from 'react-router-dom'
+import { cn } from '@/lib/utils'
 
 type Props = PropsWithChildren<{
   to: string
