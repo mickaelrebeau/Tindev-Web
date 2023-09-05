@@ -37,14 +37,6 @@ body {
   z-index: 1;
 } */
 
-.gradient-1 {
-  background-image: linear-gradient(180deg, #00c2ff, #ff29c3);
-}
-
-.gradient-2 {
-  background-image: linear-gradient(180deg, #184bff, #174aff);
-}
-
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #09090b;
@@ -102,11 +94,11 @@ h3 {
   }
 
   .scrollbar-shadow-track::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
 
   .scrollbar-shadow-thumb::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
   }
 
   .scrollbar-bg-white::-webkit-scrollbar-thumb {
