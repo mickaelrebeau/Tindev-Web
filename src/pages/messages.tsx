@@ -4,6 +4,7 @@ import {
 } from '@/components/ui/background/LinearGradient'
 import { Chat } from '@/components/ui/message/Chat'
 import { MatchProfile } from '@/components/ui/message/MatchProfile'
+import ErrorBoundary from '@/components/utils/ErrorBoundary'
 
 // TODO : Ajouter le choix de la couleur des messages  a l'utilisateur
 // TODO : WEB SOCKET
@@ -32,7 +33,9 @@ export function Messages() {
           <Chat />
         </div>
         <div className="col-start-3 col-end-4 row-start-1 row-end-4">
-          <MatchProfile />
+          <ErrorBoundary>
+            <MatchProfile userId="1" />
+          </ErrorBoundary>
         </div>
       </div>
     </>
