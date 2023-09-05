@@ -6,7 +6,7 @@ export function App() {
   const { pathname } = useLocation()
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex h-screen flex-col">
       <NavBar className="flex-initial" />
       {/* TODO: Mettre ca directement sur section */}
       <div id="background"></div>
