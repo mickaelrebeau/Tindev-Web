@@ -3,6 +3,8 @@ import {
   LinearGradientBlueToPink,
 } from '@/components/ui/background/LinearGradient'
 import { Chat } from '@/components/ui/message/Chat'
+import { DiscoverNewMatches } from '@/components/ui/message/DiscoverNewMatches'
+import { ListMessages } from '@/components/ui/message/ListMessages'
 import { MatchProfile } from '@/components/ui/message/MatchProfile'
 import ErrorBoundary from '@/components/utils/ErrorBoundary'
 
@@ -17,26 +19,24 @@ import ErrorBoundary from '@/components/utils/ErrorBoundary'
 export function Messages() {
   return (
     <>
-      <LinearGradientBlueToPink />
-      <LinearGradientBlueToBlue />
-      <div className="grid h-[inherit] grid-cols-messages grid-rows-messages">
-        <div className="col-start-1 col-end-2 row-start-1 row-end-2">
-          Profile
-        </div>
-        <div className="col-start-1 col-end-2 row-start-2 row-end-3">
-          Discover
-        </div>
-        <div className="col-start-1 col-end-2 row-start-3 row-end-4">
-          Messages
-        </div>
-        <div className="col-start-2 col-end-3 row-start-1 row-end-4 h-[inherit] border-l-2 border-r-2">
+      <div className="absolute -z-1 h-[inherit] w-full overflow-hidden">
+        <LinearGradientBlueToPink />
+        <LinearGradientBlueToBlue />
+      </div>
+      <div className="flex h-[inherit]">
+        <aside className="w-1/4 min-w-[300px] max-w-[500px]">
+          <DiscoverNewMatches />
+          <ListMessages />
+        </aside>
+        <main className="flex-auto border-x-2">
           <Chat />
-        </div>
-        <div className="col-start-3 col-end-4 row-start-1 row-end-4">
+        </main>
+        {/* w-[300px] ne marchait pas, pas trouvé pk :D */}
+        <aside className="min-w-[300px] max-w-[300px]">
           <ErrorBoundary>
             <MatchProfile userId="1" />
           </ErrorBoundary>
-        </div>
+        </aside>
       </div>
     </>
   )
