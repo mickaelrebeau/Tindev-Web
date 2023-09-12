@@ -74,21 +74,21 @@ export function Card({
             <Paragraph className={'font-bold md:text-3xl'}>Relations</Paragraph>
 
             <div className={'flex items-center justify-start pl-6 '}>
-              <div className={'-mx-6 h-18 w-18 rounded-full bg-red-300'}></div>
-              <div className={'-mx-6 h-18 w-18 rounded-full bg-blue-300'}></div>
+              <div className={'-mx-6 h-16 w-16 rounded-full bg-red-300'}></div>
+              <div className={'-mx-6 h-16 w-16 rounded-full bg-blue-300'}></div>
               <div
-                className={'-mx-6 h-18 w-18 rounded-full bg-yellow-300'}></div>
+                className={'-mx-6 h-16 w-16 rounded-full bg-yellow-300'}></div>
               <div
-                className={'-mx-6 h-18 w-18 rounded-full bg-green-300'}></div>
-              <div className={'-mx-6 h-18 w-18 rounded-full bg-red-300'}></div>
-              <div className={'-mx-6 h-18 w-18 rounded-full bg-blue-300'}></div>
+                className={'-mx-6 h-16 w-16 rounded-full bg-green-300'}></div>
+              <div className={'-mx-6 h-16 w-16 rounded-full bg-red-300'}></div>
+              <div className={'-mx-6 h-16 w-16 rounded-full bg-blue-300'}></div>
               <div
-                className={'-mx-6 h-18 w-18 rounded-full bg-yellow-300'}></div>
+                className={'-mx-6 h-16 w-16 rounded-full bg-yellow-300'}></div>
               <div
-                className={'-mx-6 h-18 w-18 rounded-full bg-purple-300'}></div>
+                className={'-mx-6 h-16 w-16 rounded-full bg-purple-300'}></div>
               <div
                 className={
-                  '-mx-6 flex h-18 w-18 items-center justify-center rounded-full bg-blue-300 text-3xl font-bold'
+                  '-mx-6 flex h-16 w-16 items-center justify-center rounded-full bg-blue-300 text-3xl font-bold'
                 }>
                 {' '}
                 +8
