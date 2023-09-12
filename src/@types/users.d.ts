@@ -5,4 +5,7 @@ type User = {
   jobTitle: string
   birthday: Date
   photos: string[]
+
+  avatar: string
+  username: string
 }
