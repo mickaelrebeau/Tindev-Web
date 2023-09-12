@@ -4,11 +4,13 @@ import { Wait } from '../methods/async'
 export async function getUser(userId: string): Promise<User> {
   await Wait(1000)
 
-  // return Promise.reject("User not found")
+  // return Promise.reject({ message: 'User not found' })
 
   return Promise.resolve({
     id: userId,
     name: faker.person.fullName(),
+    username: faker.animal.cat(),
+    avatar: faker.image.avatar(),
     bio: faker.lorem.sentence(69),
     jobTitle: faker.person.jobTitle(),
     birthday: faker.date.past({
