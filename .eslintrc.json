@@ -20,6 +20,7 @@
     "node": true
   },
   "rules": {
-    "react-refresh/only-export-components": "warn"
+    "react-refresh/only-export-components": "warn",
+    "@typescript-eslint/ban-types": "warn"
   }
 }
