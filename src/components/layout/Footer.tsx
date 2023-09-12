@@ -1,8 +1,6 @@
 import { cn } from '@/lib/methods/utils'
 
-type Props = {
-  className?: string
-}
+type Props = PropsWithClassname
 
 export function Footer({ className }: Props) {
   return (

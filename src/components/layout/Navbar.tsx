@@ -2,9 +2,7 @@ import { cn } from '@/lib/methods/utils'
 import logo from '@/assets/logo.png'
 import { NavItem } from '../ui/NavItem'
 
-type Props = {
-  className?: string
-}
+type Props = PropsWithClassname
 
 export function NavBar({ className }: Props) {
   return (
