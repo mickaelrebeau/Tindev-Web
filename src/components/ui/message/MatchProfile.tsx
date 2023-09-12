@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
 import { ErrorMessage } from '@/components/utils/ErrorMessage'
-import { getUser } from '@/lib/api/users'
 import { getAge } from '@/lib/methods/date'
+import { useUser } from '@/lib/queries/users'
 import { SliderPhotos } from '../SliderPhotos'
 
 type Props = {
@@ -9,35 +8,13 @@ type Props = {
 }
 
 export function MatchProfile({ userId }: Props) {
-  const [user, setUser] = useState<User>()
-  const [error, setError] = useState<string | null>(null)
+  const { isLoading, error, data: user } = useUser(userId)
 
-  useEffect(() => {
-    async function loadUser() {
-      try {
-        const res = await getUser(userId)
-        setUser(res)
-      } catch (err) {
-        if (typeof err === 'string') {
-          console.error(err)
-          setError(err)
-        }
-      }
-    }
-    loadUser()
-  }, [userId])
-
-  if (error) {
-    return <ErrorMessage message={error} />
-  }
-
-  if (!user) {
-    return <div className="p-2">Loading...</div>
-  }
+  if (isLoading) return <div className="p-2">Loading...</div>
+  if (error) return <ErrorMessage message={error.message} />
 
   return (
     <>
-      {/* photos */}
       <SliderPhotos photos={user.photos} />
       <main className="py-4">
         <h2 className="px-4">Forth, {getAge(new Date(2000, 1, 1))} ans</h2>
