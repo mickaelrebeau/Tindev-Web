@@ -21,7 +21,7 @@ export function SliderPhotos({ photos }: Props) {
   return (
     <div
       id="default-carousel"
-      className="relative w-full"
+      className="relative w-[inherit]"
       data-carousel="slide">
       {/* Carousel wrapper */}
       <div className="relative h-56 overflow-hidden md:h-96">

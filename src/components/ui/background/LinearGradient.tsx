@@ -12,7 +12,8 @@ export function LinearGradient({ from, to, className }: Props) {
   return (
     <div
       className={cn(
-        'absolute -z-1 h-full w-full bg-gradient-to-b blur-[150px]',
+        'absolute overflow-hidden bg-gradient-to-b blur-[150px]',
+        // 'absolute -z-1 h-full w-full bg-gradient-to-b blur-[150px] overflow-hidden',
         from,
         to,
         className
