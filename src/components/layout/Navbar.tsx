@@ -10,7 +10,7 @@ export function NavBar({ className }: Props) {
   return (
     <div
       className={cn(
-        'flex h-15 items-center gap-4 bg-gray-900 px-4 py-3 text-white',
+        'flex h-[60px] items-center gap-4 bg-gray-900 px-4 py-3 text-white',
         className
       )}>
       <img src={logo} alt="Logo" className="-mt-2 h-10" />
